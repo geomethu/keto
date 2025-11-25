@@ -13,13 +13,7 @@
 
 var jspb = require('google-protobuf');
 var goog = jspb;
-var global =
-    (typeof globalThis !== 'undefined' && globalThis) ||
-    (typeof window !== 'undefined' && window) ||
-    (typeof global !== 'undefined' && global) ||
-    (typeof self !== 'undefined' && self) ||
-    (function () { return this; }).call(null) ||
-    Function('return this')();
+var global = globalThis;
 
 goog.exportSymbol('proto.ory.keto.opl.v1alpha1.CheckRequest', null, global);
 goog.exportSymbol('proto.ory.keto.opl.v1alpha1.CheckResponse', null, global);
@@ -154,7 +148,7 @@ content: msg.getContent_asB64()
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ory.keto.opl.v1alpha1.CheckRequest}
  */
 proto.ory.keto.opl.v1alpha1.CheckRequest.deserializeBinary = function(bytes) {
@@ -316,7 +310,7 @@ parseErrorsList: jspb.Message.toObjectList(msg.getParseErrorsList(),
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ory.keto.opl.v1alpha1.CheckResponse}
  */
 proto.ory.keto.opl.v1alpha1.CheckResponse.deserializeBinary = function(bytes) {
@@ -470,7 +464,7 @@ end: (f = msg.getEnd()) && proto.ory.keto.opl.v1alpha1.SourcePosition.toObject(i
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ory.keto.opl.v1alpha1.ParseError}
  */
 proto.ory.keto.opl.v1alpha1.ParseError.deserializeBinary = function(bytes) {
@@ -495,7 +489,7 @@ proto.ory.keto.opl.v1alpha1.ParseError.deserializeBinaryFromReader = function(ms
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {string} */ (reader.readStringRequireUtf8());
       msg.setMessage(value);
       break;
     case 2:
@@ -701,7 +695,7 @@ column: jspb.Message.getFieldWithDefault(msg, 2, 0)
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ory.keto.opl.v1alpha1.SourcePosition}
  */
 proto.ory.keto.opl.v1alpha1.SourcePosition.deserializeBinary = function(bytes) {

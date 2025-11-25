@@ -13,13 +13,7 @@
 
 var jspb = require('google-protobuf');
 var goog = jspb;
-var global =
-    (typeof globalThis !== 'undefined' && globalThis) ||
-    (typeof window !== 'undefined' && window) ||
-    (typeof global !== 'undefined' && global) ||
-    (typeof self !== 'undefined' && self) ||
-    (function () { return this; }).call(null) ||
-    Function('return this')();
+var global = globalThis;
 
 var ory_keto_relation_tuples_v1alpha2_relation_tuples_pb = require('../../../../ory/keto/relation_tuples/v1alpha2/relation_tuples_pb.js');
 goog.object.extend(proto, ory_keto_relation_tuples_v1alpha2_relation_tuples_pb);
@@ -209,7 +203,7 @@ relationTupleDeltasList: jspb.Message.toObjectList(msg.getRelationTupleDeltasLis
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ory.keto.relation_tuples.v1alpha2.TransactRelationTuplesRequest}
  */
 proto.ory.keto.relation_tuples.v1alpha2.TransactRelationTuplesRequest.deserializeBinary = function(bytes) {
@@ -362,7 +356,7 @@ relationTuple: (f = msg.getRelationTuple()) && ory_keto_relation_tuples_v1alpha2
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ory.keto.relation_tuples.v1alpha2.RelationTupleDelta}
  */
 proto.ory.keto.relation_tuples.v1alpha2.RelationTupleDelta.deserializeBinary = function(bytes) {
@@ -558,7 +552,7 @@ snaptokensList: (f = jspb.Message.getRepeatedField(msg, 1)) == null ? undefined 
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ory.keto.relation_tuples.v1alpha2.TransactRelationTuplesResponse}
  */
 proto.ory.keto.relation_tuples.v1alpha2.TransactRelationTuplesResponse.deserializeBinary = function(bytes) {
@@ -583,7 +577,7 @@ proto.ory.keto.relation_tuples.v1alpha2.TransactRelationTuplesResponse.deseriali
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {string} */ (reader.readStringRequireUtf8());
       msg.addSnaptokens(value);
       break;
     default:
@@ -708,7 +702,7 @@ relationQuery: (f = msg.getRelationQuery()) && ory_keto_relation_tuples_v1alpha2
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ory.keto.relation_tuples.v1alpha2.DeleteRelationTuplesRequest}
  */
 proto.ory.keto.relation_tuples.v1alpha2.DeleteRelationTuplesRequest.deserializeBinary = function(bytes) {
@@ -838,7 +832,7 @@ subject: (f = msg.getSubject()) && ory_keto_relation_tuples_v1alpha2_relation_tu
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ory.keto.relation_tuples.v1alpha2.DeleteRelationTuplesRequest.Query}
  */
 proto.ory.keto.relation_tuples.v1alpha2.DeleteRelationTuplesRequest.Query.deserializeBinary = function(bytes) {
@@ -863,15 +857,15 @@ proto.ory.keto.relation_tuples.v1alpha2.DeleteRelationTuplesRequest.Query.deseri
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {string} */ (reader.readStringRequireUtf8());
       msg.setNamespace(value);
       break;
     case 2:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {string} */ (reader.readStringRequireUtf8());
       msg.setObject(value);
       break;
     case 3:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {string} */ (reader.readStringRequireUtf8());
       msg.setRelation(value);
       break;
     case 4:
@@ -1150,7 +1144,7 @@ proto.ory.keto.relation_tuples.v1alpha2.DeleteRelationTuplesResponse.toObject = 
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ory.keto.relation_tuples.v1alpha2.DeleteRelationTuplesResponse}
  */
 proto.ory.keto.relation_tuples.v1alpha2.DeleteRelationTuplesResponse.deserializeBinary = function(bytes) {

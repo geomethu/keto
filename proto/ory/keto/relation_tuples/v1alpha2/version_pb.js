@@ -13,13 +13,7 @@
 
 var jspb = require('google-protobuf');
 var goog = jspb;
-var global =
-    (typeof globalThis !== 'undefined' && globalThis) ||
-    (typeof window !== 'undefined' && window) ||
-    (typeof global !== 'undefined' && global) ||
-    (typeof self !== 'undefined' && self) ||
-    (function () { return this; }).call(null) ||
-    Function('return this')();
+var global = globalThis;
 
 goog.exportSymbol('proto.ory.keto.relation_tuples.v1alpha2.GetVersionRequest', null, global);
 goog.exportSymbol('proto.ory.keto.relation_tuples.v1alpha2.GetVersionResponse', null, global);
@@ -110,7 +104,7 @@ proto.ory.keto.relation_tuples.v1alpha2.GetVersionRequest.toObject = function(in
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ory.keto.relation_tuples.v1alpha2.GetVersionRequest}
  */
 proto.ory.keto.relation_tuples.v1alpha2.GetVersionRequest.deserializeBinary = function(bytes) {
@@ -211,7 +205,7 @@ version: jspb.Message.getFieldWithDefault(msg, 1, "")
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ory.keto.relation_tuples.v1alpha2.GetVersionResponse}
  */
 proto.ory.keto.relation_tuples.v1alpha2.GetVersionResponse.deserializeBinary = function(bytes) {
@@ -236,7 +230,7 @@ proto.ory.keto.relation_tuples.v1alpha2.GetVersionResponse.deserializeBinaryFrom
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {string} */ (reader.readStringRequireUtf8());
       msg.setVersion(value);
       break;
     default:

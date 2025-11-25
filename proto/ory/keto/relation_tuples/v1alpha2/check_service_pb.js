@@ -13,13 +13,7 @@
 
 var jspb = require('google-protobuf');
 var goog = jspb;
-var global =
-    (typeof globalThis !== 'undefined' && globalThis) ||
-    (typeof window !== 'undefined' && window) ||
-    (typeof global !== 'undefined' && global) ||
-    (typeof self !== 'undefined' && self) ||
-    (function () { return this; }).call(null) ||
-    Function('return this')();
+var global = globalThis;
 
 var ory_keto_relation_tuples_v1alpha2_relation_tuples_pb = require('../../../../ory/keto/relation_tuples/v1alpha2/relation_tuples_pb.js');
 goog.object.extend(proto, ory_keto_relation_tuples_v1alpha2_relation_tuples_pb);
@@ -185,7 +179,7 @@ maxDepth: jspb.Message.getFieldWithDefault(msg, 7, 0)
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ory.keto.relation_tuples.v1alpha2.CheckRequest}
  */
 proto.ory.keto.relation_tuples.v1alpha2.CheckRequest.deserializeBinary = function(bytes) {
@@ -210,15 +204,15 @@ proto.ory.keto.relation_tuples.v1alpha2.CheckRequest.deserializeBinaryFromReader
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {string} */ (reader.readStringRequireUtf8());
       msg.setNamespace(value);
       break;
     case 2:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {string} */ (reader.readStringRequireUtf8());
       msg.setObject(value);
       break;
     case 3:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {string} */ (reader.readStringRequireUtf8());
       msg.setRelation(value);
       break;
     case 4:
@@ -236,7 +230,7 @@ proto.ory.keto.relation_tuples.v1alpha2.CheckRequest.deserializeBinaryFromReader
       msg.setLatest(value);
       break;
     case 6:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {string} */ (reader.readStringRequireUtf8());
       msg.setSnaptoken(value);
       break;
     case 7:
@@ -561,7 +555,7 @@ snaptoken: jspb.Message.getFieldWithDefault(msg, 2, "")
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ory.keto.relation_tuples.v1alpha2.CheckResponse}
  */
 proto.ory.keto.relation_tuples.v1alpha2.CheckResponse.deserializeBinary = function(bytes) {
@@ -590,7 +584,7 @@ proto.ory.keto.relation_tuples.v1alpha2.CheckResponse.deserializeBinaryFromReade
       msg.setAllowed(value);
       break;
     case 2:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {string} */ (reader.readStringRequireUtf8());
       msg.setSnaptoken(value);
       break;
     default:
@@ -722,7 +716,7 @@ snaptoken: jspb.Message.getFieldWithDefault(msg, 3, "")
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ory.keto.relation_tuples.v1alpha2.CheckResponseWithError}
  */
 proto.ory.keto.relation_tuples.v1alpha2.CheckResponseWithError.deserializeBinary = function(bytes) {
@@ -751,11 +745,11 @@ proto.ory.keto.relation_tuples.v1alpha2.CheckResponseWithError.deserializeBinary
       msg.setAllowed(value);
       break;
     case 2:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {string} */ (reader.readStringRequireUtf8());
       msg.setError(value);
       break;
     case 3:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {string} */ (reader.readStringRequireUtf8());
       msg.setSnaptoken(value);
       break;
     default:
@@ -921,7 +915,7 @@ maxDepth: jspb.Message.getFieldWithDefault(msg, 4, 0)
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ory.keto.relation_tuples.v1alpha2.BatchCheckRequest}
  */
 proto.ory.keto.relation_tuples.v1alpha2.BatchCheckRequest.deserializeBinary = function(bytes) {
@@ -955,7 +949,7 @@ proto.ory.keto.relation_tuples.v1alpha2.BatchCheckRequest.deserializeBinaryFromR
       msg.setLatest(value);
       break;
     case 3:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {string} */ (reader.readStringRequireUtf8());
       msg.setSnaptoken(value);
       break;
     case 4:
@@ -1168,7 +1162,7 @@ resultsList: jspb.Message.toObjectList(msg.getResultsList(),
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ory.keto.relation_tuples.v1alpha2.BatchCheckResponse}
  */
 proto.ory.keto.relation_tuples.v1alpha2.BatchCheckResponse.deserializeBinary = function(bytes) {

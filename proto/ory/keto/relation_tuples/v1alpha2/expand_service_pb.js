@@ -13,13 +13,7 @@
 
 var jspb = require('google-protobuf');
 var goog = jspb;
-var global =
-    (typeof globalThis !== 'undefined' && globalThis) ||
-    (typeof window !== 'undefined' && window) ||
-    (typeof global !== 'undefined' && global) ||
-    (typeof self !== 'undefined' && self) ||
-    (function () { return this; }).call(null) ||
-    Function('return this')();
+var global = globalThis;
 
 var ory_keto_relation_tuples_v1alpha2_relation_tuples_pb = require('../../../../ory/keto/relation_tuples/v1alpha2/relation_tuples_pb.js');
 goog.object.extend(proto, ory_keto_relation_tuples_v1alpha2_relation_tuples_pb);
@@ -137,7 +131,7 @@ snaptoken: jspb.Message.getFieldWithDefault(msg, 3, "")
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ory.keto.relation_tuples.v1alpha2.ExpandRequest}
  */
 proto.ory.keto.relation_tuples.v1alpha2.ExpandRequest.deserializeBinary = function(bytes) {
@@ -171,7 +165,7 @@ proto.ory.keto.relation_tuples.v1alpha2.ExpandRequest.deserializeBinaryFromReade
       msg.setMaxDepth(value);
       break;
     case 3:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {string} */ (reader.readStringRequireUtf8());
       msg.setSnaptoken(value);
       break;
     default:
@@ -346,7 +340,7 @@ tree: (f = msg.getTree()) && proto.ory.keto.relation_tuples.v1alpha2.SubjectTree
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ory.keto.relation_tuples.v1alpha2.ExpandResponse}
  */
 proto.ory.keto.relation_tuples.v1alpha2.ExpandResponse.deserializeBinary = function(bytes) {
@@ -508,7 +502,7 @@ childrenList: jspb.Message.toObjectList(msg.getChildrenList(),
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ory.keto.relation_tuples.v1alpha2.SubjectTree}
  */
 proto.ory.keto.relation_tuples.v1alpha2.SubjectTree.deserializeBinary = function(bytes) {

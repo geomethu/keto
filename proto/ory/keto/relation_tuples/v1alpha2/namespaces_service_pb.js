@@ -13,13 +13,7 @@
 
 var jspb = require('google-protobuf');
 var goog = jspb;
-var global =
-    (typeof globalThis !== 'undefined' && globalThis) ||
-    (typeof window !== 'undefined' && window) ||
-    (typeof global !== 'undefined' && global) ||
-    (typeof self !== 'undefined' && self) ||
-    (function () { return this; }).call(null) ||
-    Function('return this')();
+var global = globalThis;
 
 goog.exportSymbol('proto.ory.keto.relation_tuples.v1alpha2.ListNamespacesRequest', null, global);
 goog.exportSymbol('proto.ory.keto.relation_tuples.v1alpha2.ListNamespacesResponse', null, global);
@@ -132,7 +126,7 @@ proto.ory.keto.relation_tuples.v1alpha2.ListNamespacesRequest.toObject = functio
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ory.keto.relation_tuples.v1alpha2.ListNamespacesRequest}
  */
 proto.ory.keto.relation_tuples.v1alpha2.ListNamespacesRequest.deserializeBinary = function(bytes) {
@@ -241,7 +235,7 @@ namespacesList: jspb.Message.toObjectList(msg.getNamespacesList(),
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ory.keto.relation_tuples.v1alpha2.ListNamespacesResponse}
  */
 proto.ory.keto.relation_tuples.v1alpha2.ListNamespacesResponse.deserializeBinary = function(bytes) {
@@ -393,7 +387,7 @@ name: jspb.Message.getFieldWithDefault(msg, 1, "")
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.ory.keto.relation_tuples.v1alpha2.Namespace}
  */
 proto.ory.keto.relation_tuples.v1alpha2.Namespace.deserializeBinary = function(bytes) {
@@ -418,7 +412,7 @@ proto.ory.keto.relation_tuples.v1alpha2.Namespace.deserializeBinaryFromReader = 
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {string} */ (reader.readStringRequireUtf8());
       msg.setName(value);
       break;
     default:
